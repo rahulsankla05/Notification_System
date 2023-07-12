@@ -1,0 +1,23 @@
+// Code Explanation//
+In this Notification System, it's a LLD . Here Bridge Design Pattern used to act as a bridge between
+types of notification(Abstract) and ways of sending notification(Implementation).
+Qs: Why here Bridge DP not other DP?
+Ans: #1) As multiple types of notifications will be use.
+     #2) Implementation can be done in multiple ways depends on where to send.
+     #3) It reduces the num of classes from type_of_notif * Sending_Notif to type_of_notif + Sending_Notif.
+            text + Notes(pdf/images)  ==2
+            Email + SMS + WP == 3
+            total class == 2+3 == 5
+
+
+
+ Here Defining of Abstract and Implementation of Abstract is decouple -->(both seperated)
+
+ Steps:
+ 1). Here I used Interface class: NotificationSend where i define a method sendNotificationServices.
+ 2). Abstract Class Notification : where constructor used of Interface class same name object.
+ Reason: Here class and its object actions varies
+ ex: Notification can be Text, Json, XML, etc. And ways of sending is different: Email, SMS, WP, Tweet.
+
+
+
